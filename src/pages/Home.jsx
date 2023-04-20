@@ -8,7 +8,7 @@ import BgAnimations from '../components/BgAnimations';
 
 function Home(props) {
     return (
-        <div className='bg-[rgb(16,16,26)] min-h-screen'>
+        <div>
             <Navbar/>
         <div className='bg-[rgb(16,16,26)] min-h-screen mx-auto'>
             <div className=" flex flex-col md:flex-row md:space-x-5 text-white p-4 pt-20 md:pt-5 md:px-20">
