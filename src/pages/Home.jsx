@@ -10,10 +10,10 @@ function Home(props) {
     return (
         <div>
             <Navbar/>
-        <div className='bg-[rgb(16,16,26)] h-screen mx-auto'>
+        <div className='bg-[rgb(16,16,26)] max-h-screen mx-auto'>
             <div className=" flex flex-col md:flex-row md:space-x-5 text-white p-4 pt-20 md:pt-5 md:px-20">
                 <Fade bottom >
-                    <img src={MyPhoto} alt="My Photo" className='h-[9rem] w-[9rem] md:h-[12rem] md:w-[12rem] rounded-full object-contain mx-auto  ' />
+                    <img src={MyPhoto} alt="My Photo" className='h-[10rem] w-[10rem] md:h-[12rem] md:w-[12rem] rounded-full object-contain mx-auto  ' />
                 </Fade>    
                 <div className='p-5 leading-8 md:leading-6.5 text-justify font-light'>
                     <h1 className='font-semibold text-2xl md:text-3xl text-center md:text-start'>Umeh Daniel</h1>
