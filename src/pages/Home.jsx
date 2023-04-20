@@ -10,7 +10,7 @@ function Home(props) {
     return (
         <div>
             <Navbar/>
-        <div className='bg-[rgb(16,16,26)] min-h-screen mx-auto'>
+        <div className='bg-[rgb(16,16,26)] h-screen mx-auto'>
             <div className=" flex flex-col md:flex-row md:space-x-5 text-white p-4 pt-20 md:pt-5 md:px-20">
                 <Fade bottom >
                     <img src={MyPhoto} alt="My Photo" className='h-[7rem] w-[7rem] md:h-[12rem] md:w-[12rem] rounded-full object-contain mx-auto  ' />
