@@ -27,6 +27,7 @@ function Home(props) {
                                 <a href='https://buymeacoffee.com/somtochukwG' >Buy me a coffee☕☕</a>
                                 </button>
                            </Fade>
+                         <Socials/>
                         </div>
                           <Socials/>
                     </div>
