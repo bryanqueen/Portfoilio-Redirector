@@ -75,7 +75,7 @@ function Navbar(props) {
             </ul>
                
             </div>
-        
+        </div>
     );
 }
 
