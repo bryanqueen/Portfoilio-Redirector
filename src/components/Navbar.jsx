@@ -69,7 +69,7 @@ function Navbar(props) {
                             <li key={navItem.path} className='w-full text-center border-b-2 px-4 text-3xl py-4 md:py-2 border-white'>
                                 <Link 
                                     to={navItem.path} 
-                                    className='flex items-center justify-center gap-2 md:py-2 transition-colors duration-300 focus:text-yellow-400 focus:outline-none focus-visible:outline-none'
+                                    className='flex items-center text-white justify-center gap-2 md:py-2 transition-colors duration-300 focus:text-yellow-400 focus:outline-none focus-visible:outline-none'
                                     onClick={() => setIsToggleOpen(false)}
                                 >
                                     {navItem.name}
