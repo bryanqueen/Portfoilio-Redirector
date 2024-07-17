@@ -9,7 +9,7 @@ const NavItems = [
   {name: 'Home', path: '/'},
   {name: 'Project Catalogue', path: '/projects'},
   {name: 'My Tech Stacks', path: '/stacks'},
-  {name: 'Startups', path:'/startups'}
+  //{name: 'Startups', path:'/startups'}
 ]
 
 const NavItemsDesktop = [
@@ -47,10 +47,7 @@ function Navbar(props) {
                      <li key={idx} className='text-white font-medium text-2xl md:text-xl hover:text-yellow-300'>
                      <Link to={navitem.path}>{navitem.name}</Link>
                    </li>
-                   ))}
-                   
-                  <button className='flex justify-center items-center px-3 py-2.5 rounded-xl gap-1 w-full border border-gray-900  bg-yellow-400 text-gray-800 text-xl' disabled > <BsDownload/> <a href="/Umeh_Daniel_CV.pdf" download='Umeh_Daniel_CV.pdf' className='lg:text-sm md:text-sm ' aria-disabled >Download My CV</a></button>
-                  </ul>
+                 </ul>
                </div>
                 <div className={`w-10 h-10 p-2 justify-center items-center gap-2.5 flex lg:hidden 
              ${
@@ -74,9 +71,7 @@ function Navbar(props) {
                   <Link to={navItem.path} className='flex items-center gap-2 md:py-2 transition-colors duration-300 focus:text-yellow-400 focus:outline-none focus-visible:outline-none '>{navItem.name}</Link>
                 </li>
               ))}
-              <div className='py-4 px-2'>
-              <button className='flex justify-center items-center px-3 py-2.5 rounded-xl gap-1 w-full border border-gray-900  bg-yellow-400 text-gray-800 text-xl' disabled > <BsDownload/> <a href="/Umeh_Daniel_CV.pdf" download='Umeh_Daniel_CV.pdf' className='lg:text-sm md:text-sm ' aria-disabled >Download My CV</a></button>
-              </div>
+             
             </ul>
                
             </div>
