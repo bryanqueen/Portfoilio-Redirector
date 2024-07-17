@@ -16,7 +16,7 @@ const NavItemsDesktop = [
   {name: 'Home', path: '/'},
   {name: 'Projects', path: '/projects'},
   {name: 'Stacks', path: '/stacks'},
-  {name: 'Startups', path:'/startups'}
+  // {name: 'Startups', path:'/startups'}
 ]
 
 function Navbar(props) {
