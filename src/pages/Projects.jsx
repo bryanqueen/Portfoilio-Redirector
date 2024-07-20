@@ -67,12 +67,12 @@ const ProjectItem = [
         description: 'Nice Discord rich presences for virtual air traffic controllers.',
         projectLink: 'https://github.com/bryanqueen/DiscordAir-Ctrl'
     },
-    {
-        image: s1Db,
-        name: 's1Db Node',
-        description: 'A barebones key-value store that requires no setup besides a token.',
-        projectLink: 'https://github.com/bryanqueen/s1Db-node'
-    }
+    // {
+    //     image: s1Db,
+    //     name: 's1Db Node',
+    //     description: 'A barebones key-value store that requires no setup besides a token.',
+    //     projectLink: 'https://github.com/bryanqueen/s1Db-node'
+    // }
 ]
 
 function Projects(props) {
