@@ -9,7 +9,7 @@ const NavItems = [
   {name: 'Home', path: '/'},
   {name: 'Project Catalogue', path: '/projects'},
   {name: 'My Tech Stacks', path: '/stacks'},
-  {name: 'Startups', path:'/startups'}
+  //{name: 'Startups', path:'/startups'}
 ]
 
 const NavItemsDesktop = [
@@ -37,7 +37,8 @@ function Navbar(props) {
         }, [currentTextindex]);
         
     return (
-        <div className="bg-[#10101a] z-10 top-0 text-white border-b flex justify-between relative b-4 border-white py-4 px-2 md:px-6 items-center">
+        <>
+            <div className="bg-[#10101a] z-50 fixed top-0 left-0 right-0 text-white border-b flex justify-between relative b-4 border-white py-4 px-2 md:px-6 items-center">
                 <Slide left>
                     <h2 className='text-2xl md:3xl lg:text-4xl  font-mono'>{texts[currentTextindex]}</h2>
                 </Slide> 
@@ -48,9 +49,7 @@ function Navbar(props) {
                      <Link to={navitem.path}>{navitem.name}</Link>
                    </li>
                    ))}
-                   
-                  <button className='flex justify-center items-center px-3 py-2.5 rounded-xl gap-1 w-full border border-gray-900  bg-yellow-400 text-gray-800 text-xl' disabled > <BsDownload/> <a href="/Umeh_Daniel_CV.pdf" download='Umeh_Daniel_CV.pdf' className='lg:text-sm md:text-sm ' aria-disabled >Download My CV</a></button>
-                  </ul>
+                 </ul>
                </div>
                 <div className={`w-10 h-10 p-2 justify-center items-center gap-2.5 flex lg:hidden 
              ${
@@ -62,26 +61,25 @@ function Navbar(props) {
             >
            {isToggleOpen ? <BiX className='w-10 h-10 text-white text-bold'/> :  <CiMenuFries className='w-8 h-8 text-white'/>}
             </div>
-            <ul
-              className={`absolute top-0 left-0 z-[-1] h-screen w-full justify-center overflow-hidden  overflow-y-auto overscroll-contain bg-[#10101a]  pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 ${
-                isToggleOpen
-                  ? "visible  "
-                  : "invisible "
-              }`} 
-            >
-              {NavItems.map((navItem) => (
-                <li className='flex items-stretch border-b-2 px-4 text-3xl py-4 md:py-2 border-white '>
-                  <Link to={navItem.path} className='flex items-center gap-2 md:py-2 transition-colors duration-300 focus:text-yellow-400 focus:outline-none focus-visible:outline-none '>{navItem.name}</Link>
-                </li>
-              ))}
-              <div className='py-4 px-2'>
-              <button className='flex justify-center items-center px-3 py-2.5 rounded-xl gap-1 w-full border border-gray-900  bg-yellow-400 text-gray-800 text-xl' disabled > <BsDownload/> <a href="/Umeh_Daniel_CV.pdf" download='Umeh_Daniel_CV.pdf' className='lg:text-sm md:text-sm ' aria-disabled >Download My CV</a></button>
-              </div>
-            </ul>
-               
             </div>
-        
+            {isToggleOpen && (
+                <div className="fixed inset-0 z-40 bg-[#10101a] pt-20">
+                    <ul className="flex flex-col items-center justify-center h-full">
+                        {NavItems.map((navItem) => (
+                            <li key={navItem.path} className='w-full text-center border-b-2 px-4 text-3xl py-4 md:py-2 border-white'>
+                                <Link 
+                                    to={navItem.path} 
+                                    className='flex items-center text-white justify-center gap-2 md:py-2 transition-colors duration-300 focus:text-yellow-400 focus:outline-none focus-visible:outline-none'
+                                    onClick={() => setIsToggleOpen(false)}
+                                >
+                                    {navItem.name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+        </>
     );
 }
-
 export default Navbar;
